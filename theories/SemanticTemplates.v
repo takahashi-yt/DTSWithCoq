@@ -42,24 +42,21 @@ Proof.
 Defined.
 
 
-(* 帰納的型として underspecified types (aspT) を定義する
-   ただしこの型の要素は，自然数型や二分木(binary trees)型とは異なり，帰納的に定義されてはいない
-   この意味では，単なるデータ型として aspT を定義していると言った方が正確
+(* In DTSWithCoq, underspecified types are defined as inductive types which are called aspT
 
-   型 aspT A a B で照応表現を含む文（例えば "He whistled."）を表すことを意図している
-   Aにはholeの型が入り（例えば {x : entity & male x}），aにはholeが入る（例えば ?[asp1]）
-   そしてBで照応表現を含む文を表す
-  （例えばBを whistle (projT1 ?asp1) とおく
-   ここで?[asp1]から [] を外したのは，こうしないとCoqがまた新しいholeが来たと勘違いするから）
-
-   aspTの要素を構成するコンストラクタ resolve は，その名前の通り，
-   照応を解決するようなオブジェクトを引数としてとる *)
+   The expression aspT A a B is intended to represent a result of anaphora resolution:
+   let B be a sentence including an anaphoric expression of type A,
+   then aspT A a B corresponds to the sentence obtained by replacing the anaphoric expression in B
+   with an antecedent a of type A *)
   
 Inductive aspT (A : Type) (a : A) (B : Type) : Type :=
     resolve : B -> aspT A a B.
 
 
-(* 照応解析と，解析結果を用いた推論を同時に行うための型
-   使用例は Anaphora.v を参照 *)
+(* The type resolution_record enables to store both a result A : Type of anaphora resolution and
+   a proof of A
+   It is useful for natural language inference using a result of anaphora resolution
+
+   see Anaphora.v for some examples *)
 
 Definition resolution_record : Type := {A : Type & A}.  

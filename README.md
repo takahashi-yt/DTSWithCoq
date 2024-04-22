@@ -2,11 +2,13 @@
 
 # Outline
 
-This library provides Coq tactics to Dependent Type Semantics \[1, 2\], which is a framework for natural language semantics.
+This library provides Coq tactics to Dependent Type Semantics \[1, 2\], which is a framework for natural language semantics. A brief explanation of the library can be found in \[3\].
 
 \[1\] Daisuke Bekki. Representing Anaphora with Dependent Types. Nicholas Asher and Sergei Soloviev (eds.), *Logical Aspects of Computational Linguistics - 8th International Conference, LACL 2014, Toulouse, France, June 18-20, 2014. Proceedings*, vol. 8535 of Lecture Notes in Computer Science, 14--29. Springer. (2014)
 
 \[2\] Daisuke Bekki and Koji Mineshima. Context-Passing and Underspecification in Dependent Type Semantics. Stergios Chatzikyriakidis and Zhaohui Luo (eds.), *Modern Perspectives in Type-Theoretical Semantics*, vol. 98 of Studies in Linguistics and Philosophy, 11--41. Springer, Cham. (2017)
+
+\[3\] Hina Kosaihira, Yuta Takahashi, and Daisuke Bekki. Implementation of Anaphora Resolution Using the Refine Tactic of Coq. In: [Abstract Booklet of the 2023 Workshop on Proof Theory and its Applications](https://www.ub.edu/prooftheory/event/tps2023workshop/Booklet_of_abstracts_TPSW23.pdf). (2023)
 
 ## To Use the Library
 

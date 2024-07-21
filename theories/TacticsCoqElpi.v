@@ -3,12 +3,15 @@ Require Import DTSTactics.
 
 Parameter human man : entity -> Type.
 
-
 (* some experimental tactics to search for certain entities such as
-   non-human entities and man
+   non-human entities and men
 
    We implement the tactics by using Coq-Elpi *)
 
+
+(* a tactic to search for non-human entities in a context
+   it can be used for the accessibility check of 'it',
+   i.e., the search for the possible antecedents of 'it' *)
 Elpi Tactic acc_check_it.
 Elpi Accumulate lp:{{
 
@@ -31,6 +34,9 @@ Proof.
 Qed.
 
 
+(* a tactic to search for men in a context
+   it can be used for the accessibility check of 'he',
+   i.e., the search for the possible antecedents of 'he' *)
 Elpi Tactic acc_check_he.
 Elpi Accumulate lp:{{
 

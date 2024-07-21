@@ -1,4 +1,7 @@
 *~
+*.d
+*.aux
+.DS_Store
 
 CoqMakefile
 CoqMakefile.conf

@@ -1,3 +1,4 @@
 -R theories DTSInCoq
 theories/SemanticTemplates.v
 theories/DTSTactics.v
+theories/TacticsCoqElpi.v
